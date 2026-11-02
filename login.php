@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <title>Login Admin</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="login-body">
     <div class="login-card">
