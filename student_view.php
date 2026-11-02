@@ -14,7 +14,7 @@ $result = mysqli_query($connection, $query);
 <head>
     <meta charset="UTF-8">
     <title>Daftar Mahasiswa</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="navbar">
