@@ -3,13 +3,13 @@ $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
 
-// Koneksi tanpa nama database untuk membuat database baru
+// Koneksi ke MySQL tanpa memilih database terlebih dahulu
 $conn = mysqli_connect($db_host, $db_user, $db_pass);
 if (!$conn) {
     die("Koneksi MySQL gagal: " . mysqli_connect_error());
 }
 
-// 1. Buat Database
+// 1. Buat Database kampus_db
 $sql_db = "CREATE DATABASE IF NOT EXISTS kampus_db";
 if (!mysqli_query($conn, $sql_db)) {
     die("Gagal membuat database: " . mysqli_error($conn));
@@ -24,7 +24,7 @@ $sql_admin = "CREATE TABLE IF NOT EXISTS admin (
 )";
 mysqli_query($conn, $sql_admin);
 
-// Isi admin default (username: admin, password: password123)
+// Isi data admin default (username: admin, password: password123)
 $hashed_password = password_hash("password123", PASSWORD_DEFAULT);
 $sql_insert_admin = "INSERT IGNORE INTO admin (username, password) VALUES ('admin', '$hashed_password')";
 mysqli_query($conn, $sql_insert_admin);
